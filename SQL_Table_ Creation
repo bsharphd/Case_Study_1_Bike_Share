@@ -1,4 +1,5 @@
 # Combine tables
+
 CREATE TABLE table_divvy_year AS
   (SELECT
     ride_id, rideable_type, ride_length, day_of_week_name, start_station_name, end_station_name, member_casual
