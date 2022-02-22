@@ -1,69 +1,69 @@
 # Combine tables
 
 CREATE TABLE table_divvy_year AS
-  (SELECT
-    ride_id, rideable_type, ride_length, day_of_week_name, start_station_name, end_station_name, member_casual
-  FROM 
-    202102_divvy_tripdata
-  UNION
-  SELECT
-    ride_id, rideable_type, ride_length, day_of_week_name, start_station_name, end_station_name, member_casual
-  FROM
-    202103_divvy_tripdata
-  UNION
-  SELECT
-    ride_id, rideable_type, ride_length, day_of_week_name, start_station_name, end_station_name, member_casual
-  FROM
-    202104_divvy_tripdata
-  UNION
-  SELECT
-    ride_id, rideable_type, ride_length, day_of_week_name, start_station_name, end_station_name, member_casual
-  FROM
-    202105_divvy_tripdata
-  UNION
-  SELECT
-    ride_id, rideable_type, ride_length, day_of_week_name, start_station_name, end_station_name, member_casual
-  FROM
-    202106_divvy_tripdata
-  UNION
-  SELECT
-    ride_id, rideable_type, ride_length, day_of_week_name, start_station_name, end_station_name, member_casual
-  FROM
-    202107_divvy_tripdata
-  UNION
-  SELECT
-    ride_id, rideable_type, ride_length, day_of_week_name, start_station_name, end_station_name, member_casual
-  FROM
-    202108_divvy_tripdata
-  UNION
-  SELECT
-    ride_id, rideable_type, ride_length, day_of_week_name, start_station_name, end_station_name, member_casual
-  FROM
-    202109_divvy_tripdata
-  UNION
-  SELECT
-    ride_id, rideable_type, ride_length, day_of_week_name, start_station_name, end_station_name, member_casual
-  FROM
-    202110_divvy_tripdata
-  UNION
-  SELECT
-    ride_id, rideable_type, ride_length, day_of_week_name, start_station_name, end_station_name, member_casual
-  FROM
-    202111_divvy_tripdata
-  UNION
-  SELECT
-    ride_id, rideable_type, ride_length, day_of_week_name, start_station_name, end_station_name, member_casual
-  FROM
-    202112_divvy_tripdata
-  UNION
-  SELECT
-    ride_id, rideable_type, ride_length, day_of_week_name, start_station_name, end_station_name, member_casual
-  FROM
-    202201_divvy_tripdata);
+	(SELECT
+		ride_id, rideable_type, ride_length, day_of_week_name, start_station_name, end_station_name, member_casual
+	FROM 
+		gda_schema.`202102-divvy-tripdata`
+	UNION
+	SELECT
+		ride_id, rideable_type, ride_length, day_of_week_name, start_station_name, end_station_name, member_casual
+	FROM
+		gda_schema.`202103-divvy-tripdata`
+	UNION
+	SELECT
+		ride_id, rideable_type, ride_length, day_of_week_name, start_station_name, end_station_name, member_casual
+	FROM
+		gda_schema.`202104-divvy-tripdata`
+	UNION
+	SELECT
+		ride_id, rideable_type, ride_length, day_of_week_name, start_station_name, end_station_name, member_casual
+	FROM
+		gda_schema.`202105-divvy-tripdata`
+	UNION
+	SELECT
+		ride_id, rideable_type, ride_length, day_of_week_name, start_station_name, end_station_name, member_casual
+	FROM
+		gda_schema.`202106-divvy-tripdata`
+	UNION
+	SELECT
+		ride_id, rideable_type, ride_length, day_of_week_name, start_station_name, end_station_name, member_casual
+	FROM
+		gda_schema.`202107-divvy-tripdata`
+	UNION
+	SELECT
+		ride_id, rideable_type, ride_length, day_of_week_name, start_station_name, end_station_name, member_casual
+	FROM
+		gda_schema.`202108-divvy-tripdata`
+	UNION
+	SELECT
+		ride_id, rideable_type, ride_length, day_of_week_name, start_station_name, end_station_name, member_casual
+	FROM
+		gda_schema.`202109-divvy-tripdata`
+	UNION
+	SELECT
+		ride_id, rideable_type, ride_length, day_of_week_name, start_station_name, end_station_name, member_casual
+	FROM
+		gda_schema.`202110-divvy-tripdata`
+	UNION
+	SELECT
+		ride_id, rideable_type, ride_length, day_of_week_name, start_station_name, end_station_name, member_casual
+	FROM
+		gda_schema.`202111-divvy-tripdata`
+	UNION
+	SELECT
+		ride_id, rideable_type, ride_length, day_of_week_name, start_station_name, end_station_name, member_casual
+	FROM
+		gda_schema.`202112-divvy-tripdata`
+	UNION
+	SELECT
+		ride_id, rideable_type, ride_length, day_of_week_name, start_station_name, end_station_name, member_casual
+	FROM
+		gda_schema.`202201-divvy-tripdata`);
   
   # My SQL Workbnech
   # Don't Limit
   # Edit > Preferences > SQL Editor > DBMS connection read timeout internal (in seconds) > 6000
   # Change C:\ProgramData\MySQL\MySQL Server 8.0\my.ini buffer_pool_size to 4G
   # Restart MySQL80 in Services
-  # Duration / Fetch, 85.718 sec
+  # Duration / Fetch, 191.735 sec
