@@ -1,0 +1,5 @@
+# Max HH:MM to bypass 838:59 limitation of SQL's upper limit for sec_to_time which converts total seconds to time
+SELECT ride_id, CONCAT(FLOOR((max(ride_mins)*60)/3600),':',FLOOR(((max(ride_mins)*60)%3600)/60))
+FROM gda_schema.table_divvy_year
+
+# Min HH:MM
