@@ -7,6 +7,13 @@
 
 # Mean HH:MM
       SELECT ride_id, sec_to_time(avg(ride_mins) * 60) FROM gda_schema.table_divvy_year;
+      
+# Mode HH:MM
+	SELECT count(*), sec_to_time(ride_mins * 60)
+	FROM gda_schema.table_divvy_year
+	GROUP BY ride_mins
+	ORDER BY count(*) DESC
+	LIMIT 1
 
 # Total Casual Riders
       SELECT count(*)
