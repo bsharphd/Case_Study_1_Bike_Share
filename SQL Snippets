@@ -40,6 +40,16 @@
       GROUP BY day_of_week_name
       ORDER BY total_rides DESC
 
-Most and Least Popular Start Station	
+Most and Least Popular Start Station
+      SELECT start_station_name,
+	count(*) AS total_rides_from_start_station
+      FROM `gda_schema`.`table_divvy_year`
+      GROUP BY start_station_name
+      ORDER BY total_rides_from_start_station DESC
 
 Most and Least Popular End Station
+      SELECT end_station_name,
+	count(*) AS total_rides_to_end_station
+      FROM `gda_schema`.`table_divvy_year`
+      GROUP BY end_station_name
+      ORDER BY total_rides_to_end_station DESC
