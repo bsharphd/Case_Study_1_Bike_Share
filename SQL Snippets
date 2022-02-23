@@ -1,5 +1,32 @@
 # Max HH:MM to bypass 838:59 limitation of SQL's upper limit for sec_to_time which converts total seconds to time
-SELECT ride_id, CONCAT(FLOOR((max(ride_mins)*60)/3600),':',FLOOR(((max(ride_mins)*60)%3600)/60))
-FROM gda_schema.table_divvy_year
+      SELECT ride_id, CONCAT(FLOOR((max(ride_mins)*60)/3600),':',FLOOR(((max(ride_mins)*60)%3600)/60))
+      FROM gda_schema.table_divvy_year
 
-# Min HH:MM
+# Min HH:MM 
+      SELECT ride_id, sec_to_time(min(ride_mins) * 60) FROM gda_schema.table_divvy_year;
+
+# Mean HH:MM
+      SELECT ride_id, sec_to_time(avg(ride_mins) * 60) FROM gda_schema.table_divvy_year;
+
+# Total Casual Riders
+
+
+
+
+Total Casual Riders	
+Total Member Riders	
+Total Docked Bikes	
+Total Electric Bikes	
+Total Classic Bikes	
+
+
+
+# Most Popular Day of Week
+      SELECT day_of_week_name,
+        count(*) AS total_rides
+      FROM `gda_schema`.`table_divvy_year`
+      GROUP BY day_of_week_name
+      ORDER BY total_rides DESC
+Least Popular Day of Week	
+Most Popular Start Station	
+Most Popular End Station
