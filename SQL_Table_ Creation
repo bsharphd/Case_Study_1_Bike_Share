@@ -2,62 +2,62 @@
 
 CREATE TABLE table_divvy_year AS
 	(SELECT
-		ride_id, rideable_type, ride_length, ride_hrs, ride_mins, day_of_week_name, start_station_name, end_station_name, member_casual
+		ride_id, rideable_type, ride_length, ride_hrs, ride_mins, day_of_week_name, start_station_name, end_station_name, member_casual, started_at, ended_at, start_lat, start_lng, end_lat, end_lng
 	FROM 
 		gda_schema.`202102-divvy-tripdata`
 	UNION
 	SELECT
-		ride_id, rideable_type, ride_length, ride_hrs, ride_mins, day_of_week_name, start_station_name, end_station_name, member_casual
+		ride_id, rideable_type, ride_length, ride_hrs, ride_mins, day_of_week_name, start_station_name, end_station_name, member_casual, started_at, ended_at, start_lat, start_lng, end_lat, end_lng
 	FROM
 		gda_schema.`202103-divvy-tripdata`
 	UNION
 	SELECT
-		ride_id, rideable_type, ride_length, ride_hrs, ride_mins, day_of_week_name, start_station_name, end_station_name, member_casual
+		ride_id, rideable_type, ride_length, ride_hrs, ride_mins, day_of_week_name, start_station_name, end_station_name, member_casual, started_at, ended_at, start_lat, start_lng, end_lat, end_lng
 	FROM
 		gda_schema.`202104-divvy-tripdata`
 	UNION
 	SELECT
-		ride_id, rideable_type, ride_length, ride_hrs, ride_mins, day_of_week_name, start_station_name, end_station_name, member_casual
+		ride_id, rideable_type, ride_length, ride_hrs, ride_mins, day_of_week_name, start_station_name, end_station_name, member_casual, started_at, ended_at, start_lat, start_lng, end_lat, end_lng
 	FROM
 		gda_schema.`202105-divvy-tripdata`
 	UNION
 	SELECT
-		ride_id, rideable_type, ride_length, ride_hrs, ride_mins, day_of_week_name, start_station_name, end_station_name, member_casual
+		ride_id, rideable_type, ride_length, ride_hrs, ride_mins, day_of_week_name, start_station_name, end_station_name, member_casual, started_at, ended_at, start_lat, start_lng, end_lat, end_lng
 	FROM
 		gda_schema.`202106-divvy-tripdata`
 	UNION
 	SELECT
-		ride_id, rideable_type, ride_length, ride_hrs, ride_mins, day_of_week_name, start_station_name, end_station_name, member_casual
+		ride_id, rideable_type, ride_length, ride_hrs, ride_mins, day_of_week_name, start_station_name, end_station_name, member_casual, started_at, ended_at, start_lat, start_lng, end_lat, end_lng
 	FROM
 		gda_schema.`202107-divvy-tripdata`
 	UNION
 	SELECT
-		ride_id, rideable_type, ride_length, ride_hrs, ride_mins, day_of_week_name, start_station_name, end_station_name, member_casual
+		ride_id, rideable_type, ride_length, ride_hrs, ride_mins, day_of_week_name, start_station_name, end_station_name, member_casual, started_at, ended_at, start_lat, start_lng, end_lat, end_lng
 	FROM
 		gda_schema.`202108-divvy-tripdata`
 	UNION
 	SELECT
-		ride_id, rideable_type, ride_length, ride_hrs, ride_mins, day_of_week_name, start_station_name, end_station_name, member_casual
+		ride_id, rideable_type, ride_length, ride_hrs, ride_mins, day_of_week_name, start_station_name, end_station_name, member_casual, started_at, ended_at, start_lat, start_lng, end_lat, end_lng
 	FROM
 		gda_schema.`202109-divvy-tripdata`
 	UNION
 	SELECT
-		ride_id, rideable_type, ride_length, ride_hrs, ride_mins, day_of_week_name, start_station_name, end_station_name, member_casual
+		ride_id, rideable_type, ride_length, ride_hrs, ride_mins, day_of_week_name, start_station_name, end_station_name, member_casual, started_at, ended_at, start_lat, start_lng, end_lat, end_lng
 	FROM
 		gda_schema.`202110-divvy-tripdata`
 	UNION
 	SELECT
-		ride_id, rideable_type, ride_length, ride_hrs, ride_mins, day_of_week_name, start_station_name, end_station_name, member_casual
+		ride_id, rideable_type, ride_length, ride_hrs, ride_mins, day_of_week_name, start_station_name, end_station_name, member_casual, started_at, ended_at, start_lat, start_lng, end_lat, end_lng
 	FROM
 		gda_schema.`202111-divvy-tripdata`
 	UNION
 	SELECT
-		ride_id, rideable_type, ride_length, ride_hrs, ride_mins, day_of_week_name, start_station_name, end_station_name, member_casual
+		ride_id, rideable_type, ride_length, ride_hrs, ride_mins, day_of_week_name, start_station_name, end_station_name, member_casual, started_at, ended_at, start_lat, start_lng, end_lat, end_lng
 	FROM
 		gda_schema.`202112-divvy-tripdata`
 	UNION
 	SELECT
-		ride_id, rideable_type, ride_length, ride_hrs, ride_mins, day_of_week_name, start_station_name, end_station_name, member_casual
+		ride_id, rideable_type, ride_length, ride_hrs, ride_mins, day_of_week_name, start_station_name, end_station_name, member_casual, started_at, ended_at, start_lat, start_lng, end_lat, end_lng
 	FROM
 		gda_schema.`202201-divvy-tripdata`);
   
