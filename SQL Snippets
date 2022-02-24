@@ -28,6 +28,15 @@
       SELECT count(*), sec_to_time(avg(ride_mins * 60))
       FROM 'gda_schema'.'table_divvy_year'
       WHERE member_casual = 'member'
+      
+-- Most and Least Popular Day of Week with Rider Membership Breakdown
+      SELECT day_of_week_name,
+		member_casual,
+        count(*) AS total_rides,
+        sec_to_time(avg(ride_mins * 60)) AS days_ride_length
+      FROM `gda_schema`.`table_divvy_year`
+      GROUP BY day_of_week_name, member_casual
+      ORDER BY member_casual, days_ride_length DESC
 
 -- Total Docked Bikes
       SELECT count(*)
