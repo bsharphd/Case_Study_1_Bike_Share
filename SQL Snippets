@@ -60,3 +60,7 @@
       FROM `gda_schema`.`table_divvy_year`
       GROUP BY end_station_name
       ORDER BY total_rides_to_end_station DESC
+
+-- Clean up (remove rows that meet certain criteria, (1) Don't forget to go to Edit > Preferences > SQL Editor > Uncheck Safe Updates, (2) Query > Reconnect to Server
+	DELETE FROM gda_schema.`202105-divvy-tripdata`
+	WHERE ride_id = '3EC1B5A4D4B9AB99'
