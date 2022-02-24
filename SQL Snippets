@@ -14,6 +14,10 @@
 	GROUP BY ride_mins
 	ORDER BY count(*) DESC
 	LIMIT 1
+	
+-- Median HH:MM
+	Calculated in PowerBI after trying to get the code to work in MySQL and failing
+	DAX code: Median = MEDIAN('gda_schema table_divvy_year'[ride_mins])
 
 -- Total Casual Riders
       SELECT count(*)
