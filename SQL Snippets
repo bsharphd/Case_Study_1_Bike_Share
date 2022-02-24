@@ -19,13 +19,13 @@
 	Calculated in PowerBI after trying to get the code to work in MySQL and failing
 	DAX code: Median = MEDIAN('gda_schema table_divvy_year'[ride_mins])
 
--- Total Casual Riders
-      SELECT count(*)
+-- Total Casual Riders and Avg Ride Time
+      SELECT count(*), sec_to_time(avg(ride_mins * 60))
       FROM 'gda_schema'.'table_divvy_year'
       WHERE member_casual = 'casual'
 
 -- Total Member Riders	
-      SELECT count(*)
+      SELECT count(*), sec_to_time(avg(ride_mins * 60))
       FROM 'gda_schema'.'table_divvy_year'
       WHERE member_casual = 'member'
 
