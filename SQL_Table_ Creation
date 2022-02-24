@@ -1,4 +1,4 @@
-# Combine tables
+-- Combine tables
 
 CREATE TABLE table_divvy_year AS
 	(SELECT
@@ -61,9 +61,9 @@ CREATE TABLE table_divvy_year AS
 	FROM
 		gda_schema.`202201-divvy-tripdata`);
   
-  # My SQL Workbnech
-  # Don't Limit
-  # Edit > Preferences > SQL Editor > DBMS connection read timeout internal (in seconds) > 6000
-  # Change C:\ProgramData\MySQL\MySQL Server 8.0\my.ini buffer_pool_size to 4G
-  # Restart MySQL80 in Services
-  # Duration / Fetch, 191.735 sec
+-- My SQL Workbnech
+-- Don't Limit
+-- Edit > Preferences > SQL Editor > DBMS connection read timeout internal (in seconds) > 6000
+-- Change C:\ProgramData\MySQL\MySQL Server 8.0\my.ini buffer_pool_size to 4G
+-- Restart MySQL80 in Services
+-- Duration / Fetch, 191.735 sec
