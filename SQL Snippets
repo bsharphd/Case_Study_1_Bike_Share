@@ -1,28 +1,28 @@
 -- Max HH:MM to bypass 838:59 limitation of SQL's upper limit for sec_to_time which converts total seconds to time
-      SELECT ride_id, CONCAT(FLOOR((max(ride_mins)*60)/3600),':',FLOOR(((max(ride_mins)*60)%3600)/60))
+      SELECT CONCAT(FLOOR((max(ride_mins)*60)/3600),':',FLOOR(((max(ride_mins)*60)%3600)/60))
       FROM gda_schema.table_divvy_year
 
 -- Min HH:MM 
-      SELECT ride_id, sec_to_time(min(ride_mins) * 60) FROM gda_schema.table_divvy_year;
+      SELECT sec_to_time(min(ride_mins) * 60) FROM gda_schema.table_divvy_year;
 
 -- Mean HH:MM
-      SELECT ride_id, sec_to_time(avg(ride_mins) * 60) FROM gda_schema.table_divvy_year;
+      SELECT sec_to_time(avg(ride_mins) * 60) FROM gda_schema.table_divvy_year WHERE rideable_type <> "docked_bike";
       
 -- Mode HH:MM
 	SELECT count(*), sec_to_time(ride_mins * 60)
 	FROM gda_schema.table_divvy_year
+	WHERE rideable_type <> "docked_bike"
 	GROUP BY ride_mins
 	ORDER BY count(*) DESC
 	LIMIT 1
 	
 -- Median HH:MM
-	Calculated in PowerBI after trying to get the code to work in MySQL and failing
-	DAX code: Median = MEDIAN('gda_schema table_divvy_year'[ride_mins])
+	Calculated in PowerBI after failing to get the code to work in MySQL
 
 -- Total Casual Riders and Avg Ride Time
       SELECT count(*), sec_to_time(avg(ride_mins * 60))
       FROM 'gda_schema'.'table_divvy_year'
-      WHERE member_casual = 'casual'
+      WHERE member_casual = 'casual' and rideable_type <> 'docked_bike'
 
 -- Total Member Riders and Avg Ride Time
       SELECT count(*), sec_to_time(avg(ride_mins * 60))
@@ -35,6 +35,7 @@
         count(*) AS total_rides,
         sec_to_time(avg(ride_mins * 60)) AS days_ride_length
       FROM `gda_schema`.`table_divvy_year`
+      WHERE rideable_type <> 'docked_bike'
       GROUP BY day_of_week_name, member_casual
       ORDER BY member_casual, days_ride_length DESC
 
@@ -55,8 +56,10 @@
 
 -- Most and Least Popular Day of Week
       SELECT day_of_week_name,
-        count(*) AS total_rides
+        count(*) AS total_rides,
+	sec_to_time(avg(ride_mins *60)) AS average_ride_time
       FROM `gda_schema`.`table_divvy_year`
+      WHERE rideable_type <> 'docked_bike'
       GROUP BY day_of_week_name
       ORDER BY total_rides DESC
 
