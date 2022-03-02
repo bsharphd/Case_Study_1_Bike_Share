@@ -36,4 +36,4 @@ You will produce a report with the following deliverables:
 5. Supporting visualizations and key findings
      1. [Part 1: Supporting visualizations and key findings](https://github.com/bsharphd/Case_Study_1_Bike_Share/wiki/5.1-Deliverable)
      2. [Part 2: Supporting visualizations and key findings](https://github.com/bsharphd/Case_Study_1_Bike_Share/wiki/5.2-Deliverable)
-6. [Your top three recommendations based on your analysis](https://github.com/bsharphd/Case_Study_2_Bellabeat/wiki/6.1-Deliverable)
+6. [Your top three recommendations based on your analysis](https://github.com/bsharphd/Case_Study_1_Bike_Share/wiki/6.1-Deliverable)
